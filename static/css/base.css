@@ -1,0 +1,34 @@
+body {
+    margin: 50px auto;
+    max-width: 50em;
+    line-height: 1.6;
+    font-size: 18px;
+    padding: 0 10px
+}
+
+h1,h2,h3 {
+    line-height: 1.2
+}
+
+header {
+    border-bottom: 1px solid #999;
+    margin-bottom: 2rem;
+}
+
+header h1 a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:link{
+    text-underline-offset: 1px;
+    text-decoration: underline dotted;
+    cursor: pointer;
+  }
+
+.nav-left {
+    margin-right: auto;
+}
+.nav-right {
+    display: flex;
+}
