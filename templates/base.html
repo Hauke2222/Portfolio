@@ -1,10 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link href="{% static 'css/base.css' %}" rel="stylesheet" />
+    <title>Portfolio</title>
   </head>
   <body>
     <header>
@@ -14,9 +16,7 @@
       <div >
         <h1><a href="{% url 'blog_index' %}">blog</a></h1>
       </div>
-      <hr>
     </header>
-    <br>
     <div>{% block content%} {% endblock content %}</div>
   </body>
 </html>

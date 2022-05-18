@@ -9,6 +9,8 @@ class Project(models.Model):
         "auth.User",
         on_delete=models.CASCADE,
     )
+    source_code = models.CharField(max_length=250, blank=True)
+    project_url = models.CharField(max_length=250, blank=True)
 
     def __str__(self):
         return self.title

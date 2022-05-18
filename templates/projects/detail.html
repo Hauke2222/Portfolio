@@ -1,8 +1,11 @@
 {% extends 'base.html' %} {% block content %}
 <div>
   <h1>{{ project.title }}</h1>
-  <h2>{{ project.date }}</h2>
-  <p>Author: {{ project.author }}</p>
-  <p>{{ project.text }}</p>
+  <!-- <h2>{{ project.date }}</h2> -->
+  <p>Auteur: {{ project.author }}</p>
+  <p>{{ project.text|wordwrap:75|linebreaks}}</p>
+  <br>
+  <p>Broncode: {{project.source_code | urlize}}</p>
+  <p>Url: {{project.project_url | urlize}}</p>
 </div>
 {% endblock content %}
