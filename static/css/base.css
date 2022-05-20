@@ -9,6 +9,10 @@ p {
   max-width: 35em;
 }
 
+.url {
+  max-width: 50em;
+}
+
 h1,
 h2,
 h3 {
