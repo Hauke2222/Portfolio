@@ -14,6 +14,9 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 
+dotenv_path = os.path.join(os.path.dirname(__file__), ".env")
+load_dotenv(dotenv_path)
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +28,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG")
+# In this case DEBUG will set to (bool) True, only if the environment variable is explicitly set to True or 'True'
+DEBUG = os.getenv("DEBUG", False) == "True"
 
 ALLOWED_HOSTS = [os.getenv("ALLOWED_HOSTS")]
 
