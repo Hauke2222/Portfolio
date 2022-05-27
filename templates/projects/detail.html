@@ -1,9 +1,9 @@
 {% extends 'base.html' %} {% block content %}
 <div>
-  <a href="{% url 'projects_index' %}">	
+  <a href="{% url 'projects_index' %}">
     <small>&#10550; Terug naar overzicht</small></a>
-    <br>
-  <h1>{{ project.title }}</h1>
+  <br>
+  <h2>{{ project.title }}</h2>
   <!-- <h2>{{ project.date }}</h2> -->
   <p>Auteur: {{ project.author }}</p>
   <p>{{ project.text|wordwrap:75}}</p>
