@@ -1,5 +1,8 @@
 {% extends 'base.html' %} {% block content %}
 <div>
+  <a href="{% url 'projects_index' %}">
+    <small>&#10550; Terug naar overzicht</small></a>
+  <br>
   <h1>{{ post.title }}</h1>
   <h2>{{ post.date }}</h2>
   <p>Auteur: {{ post.author }}</p>
