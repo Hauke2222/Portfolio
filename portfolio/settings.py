@@ -31,7 +31,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # In this case DEBUG will set to (bool) True, only if the environment variable is explicitly set to True or 'True'
 DEBUG = os.getenv("DEBUG", False) == "True"
 
-ALLOWED_HOSTS = [os.getenv("ALLOWED_HOSTS")]
+ALLOWED_HOSTS = [] if DEBUG else [os.getenv("ALLOWED_HOSTS")]
 
 
 # Application definition
