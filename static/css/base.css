@@ -1,7 +1,10 @@
+html {
+  font-family: Cambria, serif;
+}
 body {
   margin: 50px auto;
   max-width: 50em;
-  line-height: 1.6;
+  line-height: 1.2;
   font-size: 18px;
   padding: 0 10px;
 }
@@ -24,13 +27,12 @@ header {
   margin-bottom: 2rem;
 }
 
-header h1 a {
+.header-link {
   color: #0066cc;
-  text-decoration: none;
 }
 
 a:link {
-  text-underline-offset: 1px;
+  text-underline-offset: 2px;
   text-decoration: underline dotted;
   cursor: pointer;
 }
