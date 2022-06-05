@@ -14,3 +14,6 @@ class Project(models.Model):
 
     def __str__(self):
         return self.title
+
+    def full_author_name(self):
+        return self.author.get_full_name()
