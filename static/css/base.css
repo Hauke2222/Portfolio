@@ -26,20 +26,25 @@ header {
   border-bottom: 1px solid #999;
   margin-bottom: 2rem;
 }
-
-.header-link {
+#header > h1 > a { 
   color: #0066cc;
 }
 
-a:link {
+a:visited {
+  color: #551A8B;
+}
+
+a {
+  color: #0000EE;
   text-underline-offset: 2px;
   text-decoration: underline dotted;
   cursor: pointer;
 }
 
-.nav-left {
-  margin-right: auto;
+a:active {
+  color: red;
 }
-.nav-right {
-  display: flex;
+
+ul {
+line-height: .75;
 }

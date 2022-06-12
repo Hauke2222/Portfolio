@@ -11,6 +11,7 @@ class Project(models.Model):
     )
     source_code = models.CharField(max_length=250, blank=True)
     project_url = models.CharField(max_length=250, blank=True)
+    project_start_date = models.DateField(blank=True, null=True)
 
     def __str__(self):
         return self.title
