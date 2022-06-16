@@ -6,6 +6,7 @@
 </a>
 {% if project.project_start_date %}
 <small>Startdatum: {{project.project_start_date}}</small>
-
-{% endif %} {% endfor %}
+{% endif %}
+<div><small>Talen en frameworks: {{project.tech_stack}}</small></div>
+{% endfor %}
 {% endblock %}
