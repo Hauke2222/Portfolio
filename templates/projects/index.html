@@ -1,13 +1,11 @@
 {% extends "base.html" %} {% block content %}
-<ul>
-    {% for project in projects %}
-    <li>
-        <a href="{% url 'project_detail' project.pk %}">
-            <h2>{{project.title}}</h2>
+{% for project in projects %}
 
-        </a>
-    </li>
-    <small>{{project.project_start_date}}</small>
-    {% endfor %}
-</ul>
+<a href="{% url 'project_detail' project.pk %}">
+    <h2>{{project.title}}</h2>
+</a>
+{% if project.project_start_date %}
+<small>Startdatum: {{project.project_start_date}}</small>
+
+{% endif %} {% endfor %}
 {% endblock %}

@@ -1,13 +1,24 @@
-html {
-  font-family: Cambria, serif;
+@font-face {
+  font-family: charter;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  src: url('../fonts/charter_regular.woff2') format('woff2');
 }
+
+html {
+  font-family: 'charter';
+  display: block;
+}
+
 body {
   margin: 50px auto;
   max-width: 50em;
-  line-height: 1.2;
+  line-height: 1.4;
   font-size: 18px;
   padding: 0 10px;
 }
+
 p {
   max-width: 35em;
 }
@@ -16,28 +27,21 @@ p {
   max-width: 50em;
 }
 
-h1,
-h2,
-h3 {
-  line-height: 1.2;
-}
-
 header {
   border-bottom: 1px solid #999;
   margin-bottom: 2rem;
+  font-size: 1.75em;
 }
-#header > h1 > a { 
+
+#header>h1>a {
   color: #0066cc;
 }
 
-a:visited {
-  color: #551A8B;
-}
-
 a {
-  color: #0000EE;
+  color: #0066cc;
   text-underline-offset: 2px;
   text-decoration: underline dotted;
+  text-decoration-thickness: 1px;
   cursor: pointer;
 }
 
@@ -45,6 +49,6 @@ a:active {
   color: red;
 }
 
-ul {
-line-height: .75;
+h2 {
+  letter-spacing: 0.06em;
 }
