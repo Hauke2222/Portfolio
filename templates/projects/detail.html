@@ -4,10 +4,11 @@
     <small>&#10550; Terug naar overzicht</small></a>
   <br />
   <h2>{{ project.title }}</h2>
-  {% if project.project_start_date %}
-  <small>Startdatum: {{project.project_start_date}}</small>
-  {% endif %}
   <p>Auteur: {{ project.full_author_name }}</p>
+  {% if project.project_start_date %}
+  <div><small>Startdatum: {{project.project_start_date}}</small></div>
+  {% endif %}
+  <div><small>Talen en frameworks: {{project.tech_stack}}</small></div>
   <p>{{ project.text|wordwrap:75}}</p>
   <br />
   {% if project.source_code %}
