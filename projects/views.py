@@ -5,7 +5,7 @@ from .models import Project
 
 
 def index(request):
-    projects = get_list_or_404(Project.objects.all().order_by("-date"))
+    projects = get_list_or_404(Project.objects.all().order_by("-project_start_date"))
     return render(request, "projects/index.html", {"projects": projects})
 
 
