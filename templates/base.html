@@ -1,27 +1,27 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio van Hauke van der Mark" />
+    <meta name="author" content="Hauke van der Mark" />
+    <link href="{% static 'css/base.css' %}" rel="stylesheet" />
+    <title>Portfolio</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio van Hauke van der Mark" />
-  <meta name="author" content="Hauke van der Mark" />
-  <link href="{% static 'css/base.css' %}" rel="stylesheet" />
-  <title>Portfolio</title>
-</head>
-
-<body>
-  <header id="header">
-    <a href="{% url 'projects_index' %}">
-      <h1>projecten</h1>
-    </a>
-    <!-- <a href="{% url 'blog_index' %}">
+  <body>
+    <header>
+      <a href="{% url 'projects_index' %}">
+        <h1>projecten</h1>
+      </a>
+      <p class="inline">van</p>
+      <p class="inline">Hauke van der Mark</p>
+      <!-- <a href="{% url 'blog_index' %}">
       <h1>blog</h1>
     </a> -->
-  </header>
-  <div>{% block content%} {% endblock content %}</div>
-</body>
-
+    </header>
+    <main>{% block content%} {% endblock content %}</main>
+  </body>
 </html>
