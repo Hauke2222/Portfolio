@@ -8,64 +8,6 @@
 
  /*
 
-html {
-  font-family: 'charter';
-}
-
-body {
-  margin: 45px auto;
-  max-width: 50em;
-  line-height: 1.25;
-  font-size: 18px;
-  padding: 0 10px;
-}
-
-p {
-  max-width: 35em;
-  line-height: 1.4;
-}
-
-.url {
-  max-width: 50em;
-}
-
-header {
-  border-bottom: 1px solid #999;
-  margin-bottom: 2rem;
-  font-size: 1.75em;
-}
-
-header>h1>a {
-  color: #0066cc;
-}
-
-a {
-  line-height: 0.5;
-  color: #0066cc;
-  text-underline-offset: 2px;
-  text-decoration: underline dotted;
-  text-decoration-thickness: 1px;
-  cursor: pointer;
-}
-
-header a {
-  line-height: 1.4;
-}
-
-a:active {
-  color: red;
-}
-
-h2 {
-  font-size: 1.45em;
-  letter-spacing: 0.06em;
-}
-
-small {
-  margin-top: 0;
-} */
-
-
  /* MVP.css v1.9 - https://github.com/andybrewer/mvp */
 
  :root {
@@ -136,11 +78,11 @@ small {
  }
 
  hr {
-   background-color: var(--color-bg-secondary);
+   background-color: #999;
    border: none;
    height: 1px;
-   margin: 4rem 0;
-   width: 100%;
+   margin: 0 auto;
+   max-width: var(--width-content);
  }
 
  section {
@@ -183,7 +125,17 @@ small {
  }
 
  header {
-   text-align: var(--justify-important);
+   text-align: var(--justify-normal);
+   font-size: 24px;
+ }
+
+ header>h2,
+ header>a>h2,
+ header>p,
+ h1 {
+   display: inline;
+   line-height: 1;
+   margin-right: 1px;
  }
 
  header a b,
@@ -551,8 +503,4 @@ small {
    font-size: small;
    line-height: var(--line-height);
    padding: 1.5rem 0;
- }
-
- .inline {
-   display: inline;
  }

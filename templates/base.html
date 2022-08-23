@@ -14,14 +14,15 @@
   <body>
     <header>
       <a href="{% url 'projects_index' %}">
-        <h1>projecten</h1>
+        <h1>Projecten</h1>
       </a>
-      <p class="inline">van</p>
-      <p class="inline">Hauke van der Mark</p>
+      <small>van</small>
+      <h2>Hauke van der Mark</h2>
       <!-- <a href="{% url 'blog_index' %}">
       <h1>blog</h1>
     </a> -->
     </header>
+    <hr />
     <main>{% block content%} {% endblock content %}</main>
   </body>
 </html>
