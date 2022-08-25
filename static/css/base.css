@@ -110,7 +110,11 @@
 
  header {
    text-align: var(--justify-normal);
-   font-size: 24px;
+   font-size: 32px;
+ }
+
+ header>small {
+   color: var(--color-text-secondary);
  }
 
  header>h2,
@@ -255,7 +259,8 @@
  }
 
  small {
-   color: var(--color-text-secondary);
+   color: var(--color-text);
+   font-size: smaller;
  }
 
  sup {
@@ -271,21 +276,22 @@
  }
 
  /* Links */
- a {
+ a,
+ a>small {
    color: var(--color-link);
    display: inline-block;
    font-weight: bold;
-   text-decoration: none;
+   text-underline-offset: 3px;
+   text-decoration: underline dotted;
+   text-decoration-thickness: 1px;
  }
 
  a:active {
    filter: brightness(var(--active-brightness));
-   text-decoration: underline;
  }
 
  a:hover {
    filter: brightness(var(--hover-brightness));
-   text-decoration: underline;
  }
 
  a b,
@@ -489,12 +495,12 @@
    padding: 1.5rem 0;
  }
 
- .project-listing>h2 {
+ #project-listing h2 {
+   margin-bottom: 4px;
+   /* padding: 0; */
+ }
+
+ #project-listing p {
    margin: 0;
    padding: 0;
  }
-
- /* #test {
-   margin: 0;
-   padding: 0;
- } */

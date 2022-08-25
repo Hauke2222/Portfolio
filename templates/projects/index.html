@@ -1,30 +1,9 @@
-{% extends "base.html" %} {% block content %} {% for project in page_obj %}
-<div class="project-listing">
+{% extends "base.html" %} {% block content %} {% for project in projects %}
+<div id="project-listing">
   <a href="{% url 'project_detail' project.pk %}">
-    <h2 id="test">{{project.title}}</h2>
+    <h2>{{project.title}}</h2>
   </a>
-  {% if project.project_start_date %}
   <p>Startdatum: {{project.project_start_date}}</p>
-  {% endif %}
   <p>Talen en frameworks: {{project.tech_stack}}</p>
 </div>
-{% endfor %}
-
-<div class="pagination">
-  <span class="step-links">
-    {% if page_obj.has_previous %}
-    <a href="?page=1">&laquo; first</a>
-    <a href="?page={{ page_obj.previous_page_number }}">previous</a>
-    {% endif %}
-
-    <span class="current">
-      Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
-    </span>
-
-    {% if page_obj.has_next %}
-    <a href="?page={{ page_obj.next_page_number }}">next</a>
-    <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
-    {% endif %}
-  </span>
-</div>
-{% endblock %}
+{% endfor %} {% endblock %}

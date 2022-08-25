@@ -7,10 +7,7 @@ from .models import Project
 
 def index(request):
     projects = get_list_or_404(Project.objects.all().order_by("-project_start_date"))
-    paginator = Paginator(projects, 10)
-    page_number = request.GET.get("page")
-    page_obj = paginator.get_page(page_number)
-    return render(request, "projects/index.html", {"page_obj": page_obj})
+    return render(request, "projects/index.html", {"projects": projects})
 
 
 def detail(request, pk):
