@@ -50,7 +50,8 @@
    line-height: var(--line-height);
    margin: 0;
    overflow-x: hidden;
-   padding: 0;
+   padding-right: 1rem;
+   padding-left: 1rem;
  }
 
  footer,
@@ -58,15 +59,8 @@
  main {
    margin: 0 auto;
    max-width: var(--width-content);
-   padding: 3rem 1rem;
- }
-
- hr {
-   background-color: #999;
-   border: none;
-   height: 1px;
-   margin: 0 auto;
-   max-width: var(--width-content);
+   padding-top: 3rem;
+   padding-bottom: 3rem;
  }
 
  section {
@@ -109,11 +103,17 @@
  }
 
  header {
-   text-align: var(--justify-normal);
-   font-size: 32px;
+   text-align: var(--justify-important);
+   font-size: 28px;
+   border-bottom: 3px dashed #999;
+
  }
 
- header>small {
+ header>p {
+   font-size: 46px;
+ }
+
+ header>div>small {
    color: var(--color-text-secondary);
  }
 
@@ -241,7 +241,7 @@
  p {
    margin: 0.75rem 0;
    padding: 0;
-   width: 100%;
+   max-width: 70ch;
  }
 
  pre {
@@ -260,7 +260,6 @@
 
  small {
    color: var(--color-text);
-   font-size: smaller;
  }
 
  sup {
@@ -284,6 +283,10 @@
    text-underline-offset: 3px;
    text-decoration: underline dotted;
    text-decoration-thickness: 1px;
+ }
+
+ a>small {
+   font-weight: normal;
  }
 
  a:active {
@@ -503,4 +506,14 @@
  #project-listing p {
    margin: 0;
    padding: 0;
+ }
+
+ h2 {
+   /* font-size: 1.45em; */
+   letter-spacing: 0.05em;
+ }
+
+ article {
+   width: fit-content;
+   margin: 0 auto;
  }

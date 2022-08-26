@@ -1,14 +1,15 @@
 {% extends 'base.html' %} {% block content %}
-<div>
-  <a href="{% url 'projects_index' %}">
-    <small>&#10550; Terug naar overzicht</small></a>
+<a href="{% url 'projects_index' %}">
+  <small>&#10550; Terug naar overzicht</small>
+</a>
+<article>
   <br />
   <h2>{{ project.title }}</h2>
   {% if project.project_start_date %}
   <div><small>Startdatum: {{project.project_start_date}}</small></div>
   {% endif %}
   <div><small>Talen en frameworks: {{project.tech_stack}}</small></div>
-  <p>{{ project.text|wordwrap:75}}</p>
+  <p>{{ project.text}}</p>
   <br />
   {% if project.source_code %}
   <p class="url">Broncode: {{project.source_code | urlize}}</p>
@@ -16,5 +17,5 @@
   <p class="url">Url: {{project.project_url | urlize}}</p>
   {% endif %}
   <br />
-</div>
+</article>
 {% endblock content %}
