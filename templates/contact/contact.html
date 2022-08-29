@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block content %}
+<a href="{% url 'projects_index' %}">
+  <small>&#10550; Terug naar overzicht</small>
+</a>
+<br />
+<fieldset>
+  <legend><h2>Contact formulier</h2></legend>
+  <form method="post" action="{% url 'submit' %}">
+    {% csrf_token %} {{ form.as_p }}
+    <div class="form-actions">
+      <button type="submit">Send</button>
+    </div>
+  </form>
+</fieldset>
+
+{% endblock content %}
