@@ -6,10 +6,25 @@
 <fieldset>
   <legend><h2>Contact formulier</h2></legend>
   <form method="post" action="{% url 'submit' %}">
-    {% csrf_token %} {{ form.as_p }}
-    <div class="form-actions">
-      <button type="submit">Send</button>
+    {% csrf_token %}
+    <br />
+    <div class="fieldWrapper">
+      {{ form.name.errors }}
+      <label for="{{ form.name.id_for_label }}">Naam:</label>
+      {{ form.name }}
     </div>
+    <div class="fieldWrapper">
+      {{ form.email.errors }}
+      <label for="{{ form.email.id_for_label }}">Uw e-mailadres:</label>
+      {{ form.email }}
+    </div>
+    <div class="fieldWrapper">
+      {{ form.message.errors }}
+      <label for="{{ form.message.id_for_label }}">Bericht:</label>
+      {{ form.message }}
+    </div>
+
+    <button type="submit">Verzenden</button>
   </form>
 </fieldset>
 
