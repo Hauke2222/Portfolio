@@ -1,13 +1,14 @@
 from django.shortcuts import get_list_or_404, get_object_or_404, render
-from django.core.paginator import Paginator
 from .models import Project
+from .forms import ContactForm
 
 # Create your views here.
 
 
 def index(request):
     projects = get_list_or_404(Project.objects.all().order_by("-project_start_date"))
-    return render(request, "projects/index.html", {"projects": projects})
+    form = ContactForm()
+    return render(request, "projects/index.html", {"projects": projects, "form": form})
 
 
 def detail(request, pk):

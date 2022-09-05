@@ -63,9 +63,8 @@
    padding-bottom: 3rem;
  }
 
- main {
-   border-bottom: 1px dashed #999;
-   padding-bottom: 3em;
+ footer {
+   border-top: 2px dashed #999;
  }
 
  header {
@@ -114,7 +113,7 @@
  header {
    text-align: var(--justify-important);
    font-size: 28px;
-   border-bottom: 1px dashed #999;
+   border-bottom: 2px dashed #999;
 
  }
 
@@ -525,5 +524,5 @@
  }
 
  fieldset {
-   border: 1px dashed #999;
+   border: 2px dashed #999;
  }

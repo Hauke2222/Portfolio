@@ -1,9 +1,21 @@
 {% extends "base.html" %} {% block content %} {% for project in projects %}
-<div id="project-listing">
-  <a href="{% url 'project_detail' project.pk %}">
-    <h2>{{project.title}}</h2>
+<header>
+  <a href="{% url 'projects_index' %}">
+    <h1>Projecten</h1>
   </a>
-  <p>Startdatum: {{project.project_start_date}}</p>
-  <p>Talen en frameworks: {{project.tech_stack}}</p>
-</div>
+  <div><small>van</small></div>
+  <p>Hauke van der Mark</p>
+</header>
+<main>
+  <div id="project-listing">
+    <a href="{% url 'project_detail' project.pk %}">
+      <h2>{{project.title}}</h2>
+    </a>
+    <p>Startdatum: {{project.project_start_date}}</p>
+    <p>Talen en frameworks: {{project.tech_stack}}</p>
+  </div>
+</main>
+<footer>
+  {% include "contact/contact.html" with objects=form %}
+</footer>
 {% endfor %} {% endblock %}
