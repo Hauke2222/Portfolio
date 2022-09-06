@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% block content %} {% for project in projects %}
+{% extends "base.html" %} 
 <header>
   <a href="{% url 'projects_index' %}">
     <h1>Projecten</h1>
@@ -7,6 +7,7 @@
   <p>Hauke van der Mark</p>
 </header>
 <main>
+  {% block content %} {% for project in projects %}
   <div id="project-listing">
     <a href="{% url 'project_detail' project.pk %}">
       <h2>{{project.title}}</h2>
@@ -15,7 +16,8 @@
     <p>Talen en frameworks: {{project.tech_stack}}</p>
   </div>
 </main>
+{% endfor %} 
 <footer>
   {% include "contact/contact.html" with objects=form %}
 </footer>
-{% endfor %} {% endblock %}
+{% endblock %}
