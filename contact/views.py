@@ -16,10 +16,10 @@ def submit(request):
     print("test in submit")
     form = ContactForm(data=request.POST)
     if form.is_valid():
-        subject = "Website Inquiry"
+        subject = "Message from portfolio website"
         body = {
-            "name": form.cleaned_data["name"],
             "email": form.cleaned_data["email"],
+            "name": form.cleaned_data["name"],
             "message": form.cleaned_data["message"],
         }
         message = "\n".join(body.values())
@@ -30,4 +30,4 @@ def submit(request):
         )
     except BadHeaderError:
         return HttpResponse("Invalid header found.")
-    return HttpResponse("Bedankt voor uw bericht.")
+    return render(request, "contact/thanks.html")
