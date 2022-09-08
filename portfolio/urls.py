@@ -21,6 +21,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("projects/", include("projects.urls")),
     path("blog/", include("blog.urls")),
-    path("contact/", include("contact.urls")),
+    # path("contact/", include("contact.urls")),
     path("", lambda request: redirect("projects/", permanent=True)),
 ]
