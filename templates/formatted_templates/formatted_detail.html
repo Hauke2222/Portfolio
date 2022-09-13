@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block content %}
+<h1>{{ project.title }}</h1>
+<div><small>{{project.project_start_date}}</small></div>
+<div><small>Talen en frameworks: {{project.tech_stack}}</small></div>
+<p>{{ project.text}}</p>
+<br />
+{% if project.source_code %}
+<p>Broncode: {{project.source_code | urlize}}</p>
+{% endif %} {% if project.project_url %}
+<p>Url: {{project.project_url | urlize}}</p>
+{% endif %}
+<br />
+<br />
+<a href="{% url 'projects_index' %}">
+  <p>&#10550; Terug naar overzicht</p>
+</a>
+
+{% endblock content %}

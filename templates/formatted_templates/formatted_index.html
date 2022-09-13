@@ -1,0 +1,13 @@
+{% extends "base.html" %}{% block content %}
+<h1>Projecten</h1>
+<p class="center">Welkom op de portfolio website van Hauke van der Mark.</p>
+<br />
+<ol>
+  {% for project in projects %}
+  <li>
+    <a href="{% url 'project_detail' project.pk %}"><p>{{project.title}}</p></a>
+  </li>
+  {% endfor %}
+</ol>
+<hr />
+<a href="mailto:hauke2222@gmail.com">E-mail</a>{% endblock %}
