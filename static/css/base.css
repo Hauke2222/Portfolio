@@ -1,6 +1,7 @@
 body {
     font-family: "Palatino Linotype", "Palatino", "Times New Roman", "Droid Serif";
     font-size: 14pt;
+    line-height: 1.4;
     text-align: justify;
     -webkit-hyphens: auto;
     hyphens: auto;
