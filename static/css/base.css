@@ -1,6 +1,7 @@
 body {
     font-family: "Palatino Linotype", "Palatino", "Times New Roman", "Droid Serif";
     font-size: 14pt;
+    line-height: 1.4;
     text-align: justify;
     -webkit-hyphens: auto;
     hyphens: auto;
@@ -12,6 +13,7 @@ body {
 a,
 a:visited {
     color: #a00;
+    display: block;
 }
 
 h1:first-of-type {
@@ -20,4 +22,15 @@ h1:first-of-type {
 
 .center {
     text-align: center;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.links>a {
+    padding-right: 0.5em;
+    padding-left: 0.5em;
 }
