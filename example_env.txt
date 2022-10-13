@@ -1,0 +1,9 @@
+SECRET_KEY=django-insecure-key1
+DEBUG=True
+ALLOWED_HOSTS=127.0.0.1
+
+NAME=portfolio
+USER=root
+PASSWORD=
+HOST=127.0.0.1
+PORT=3306
