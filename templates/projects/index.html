@@ -1,5 +1,6 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} {% block content %} {% load static %}
 <h1>Projecten</h1>
+<img src="{% static 'imgs/foto.jpeg' %}" alt="foto van Hauke" />
 <p class="center">Welkom op de portfolio website van Hauke van der Mark.</p>
 <br />
 <ol>
@@ -11,10 +12,10 @@
   </li>
   {% endfor %}
 </ol>
-<br>
+<br />
 <div>
-<a class="inline" href="mailto:hauke2222@gmail.com" >E-mail</a>
-<a class="inline" href="https://github.com/Hauke2222">Github</a>
+  <a class="inline" href="mailto:hauke2222@gmail.com">E-mail</a>
+  <a class="inline" href="https://github.com/Hauke2222">Github</a>
 </div>
 
 {% endblock %}
