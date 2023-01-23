@@ -40,8 +40,7 @@ h3 {
 }
 
 p,
-ol,
-ul {
+ol {
   font-size: 1.4rem
 }
 
@@ -51,8 +50,7 @@ p {
   margin-bottom: 1.4rem;
 }
 
-ol,
-ul {
+ol {
   -webkit-padding-start: 5%;
   -webkit-padding-end: 5%
 }
@@ -89,4 +87,9 @@ html {
   html {
     font-size: 16px;
   }
+
+  ol {
+    column-count: 2;
+  }
+
 }

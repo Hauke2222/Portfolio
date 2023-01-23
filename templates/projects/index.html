@@ -6,7 +6,7 @@
 </nav>
 <h1>Portfolio</h1>
 <h2>Projecten</h2>
-<ul>
+<ol>
   {% for project in projects %}
   <li>
     <a href="{% url 'project_detail' project.pk %}">
@@ -14,7 +14,7 @@
     </a>
   </li>
   {% endfor %}
-</ul>
+</ol>
 <br>
 
 
