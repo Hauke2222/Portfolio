@@ -1,17 +1,16 @@
 {% extends 'base.html' %} {% block content %}
 <h1>{{ project.title }}</h1>
-<br />
-<small>Startdatum: {{project.project_start_date}}</small>
-<div><small>Talen en frameworks: {{project.tech_stack}}</small></div>
+<h3>Startdatum: {{project.project_start_date}}</h3>
+<h3>Talen en frameworks: {{project.tech_stack}}</h3>
 <p>{{ project.text}}</p>
 <br>
 <div class="links">
     {% if project.project_url %}
-    <a href={{project.project_url}}><p>Bekijk project</p></a>
+    <a href={{project.project_url}}>Bekijk project</a>
     {% endif %}
     {% if project.source_code %}
-    <a href={{project.source_code}}><p>Bekijk broncode</p></a>
+    <a href={{project.source_code}}>Bekijk broncode</a>
     {% endif %} 
 </div>
 <br>
-<a class="center" href="{% url 'projects_index' %}" <p>⤶ Terug naar overzicht</p></a>{% endblock content %}
+<a class="center" href="{% url 'projects_index' %}"><p>⤶ Terug naar overzicht</p></a>{% endblock content %}

@@ -1,8 +1,7 @@
 {% extends "base.html" %} {% block content %} {% load static %}
-<h1>Projecten</h1>
-<p class="center">Welkom op de portfolio website van Hauke van der Mark.</p>
-<br />
-<ol>
+<h1>Portfolio</h1>
+<h2>Projecten</h2>
+<ul>
   {% for project in projects %}
   <li>
     <a href="{% url 'project_detail' project.pk %}">
@@ -10,11 +9,12 @@
     </a>
   </li>
   {% endfor %}
-</ol>
-<br />
-<div>
-  <a class="inline" href="mailto:hauke2222@gmail.com">E-mail</a>
-  <a class="inline" href="https://github.com/Hauke2222">Github</a>
-</div>
+</ul>
+<br>
+<nav>
+  <a href="mailto:hauke2222@gmail.com">E-mail</a>
+  <span> | </span>
+  <a href="https://github.com/Hauke2222">Github</a>
+</nav>
 
 {% endblock %}
