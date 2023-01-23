@@ -9,7 +9,6 @@ body {
 
 a,
 a:visited {
-  font-size: 1.4rem;
   color: #a00;
 }
 
@@ -41,7 +40,6 @@ h3 {
 }
 
 p,
-span,
 ol,
 ul {
   font-size: 1.4rem
@@ -74,8 +72,13 @@ li {
 }
 
 .links>a {
+  font-size: 1.4rem;
   padding-right: 0.5em;
   padding-left: 0.5em;
+}
+
+nav {
+  margin: 2rem 0 0;
 }
 
 html {
