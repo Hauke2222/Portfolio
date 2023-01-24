@@ -11,6 +11,8 @@ body {
 a,
 a:visited {
   color: #a00;
+  text-decoration: underline 1px;
+  text-underline-offset: 2px;
 }
 
 h1,
@@ -52,14 +54,12 @@ p {
 }
 
 ol {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  -webkit-padding-start: 5%;
+  -webkit-padding-start: 9%;
   -webkit-padding-end: 5%;
 }
 
 li {
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
 
 .center {
@@ -92,6 +92,12 @@ html {
   }
 
   ol {
-    column-count: 2;
+    -webkit-padding-start: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  li {
+    margin: 1rem 0;
   }
 }
