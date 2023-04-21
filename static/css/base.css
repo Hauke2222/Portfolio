@@ -19,13 +19,14 @@ h1,
 h2,
 h3 {
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 h1 {
   margin-top: 4rem;
   margin-bottom: 1.5rem;
   font-size: 3.2rem;
+  text-align: center;
 }
 
 h2 {
@@ -89,6 +90,10 @@ html {
 @media screen and (min-width: 720px) {
   html {
     font-size: 16px;
+  }
+
+  h1 {
+    text-align: left;
   }
 
   ol {
